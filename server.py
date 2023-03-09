@@ -17,12 +17,12 @@ def dojo():
 def say(name):
     print(name)
     # adding the built-in function title() to capitalize the first character of the name
-    return 'Hi ' + name.title(), '!'
+    return f'{name.title()} !'
 
 # route will display the name variable number times in our page
 @app.route('/repeat/<int:number>/<name>')
 def repeat(number, name):
-    return f'{name} ' * number
+    return f'{name.title()} ' * number
 
 if __name__=="__main__":
     app.run(debug=True)
